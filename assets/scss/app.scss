@@ -1,0 +1,370 @@
+// Imports
+@import "bootstrap";
+@import "variables";
+@import "global";
+
+#header {
+  background: url("../img/lap.png") no-repeat;
+  min-height: 600px;
+  @media screen and (min-width: 1300px) {
+    background-size: 100%;
+  }
+
+  .navbar {
+    @extend .navbar-expand-sm;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    padding: 22px 10px 0;
+    .nav-link {
+      padding: 0 25px !important;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: white;
+      }
+    }
+    .fa-angle-down {
+      margin-left: 5px;
+    }
+    .btn-action {
+      width: 102px;
+      height: 38px;
+      border-radius: 19px;
+      background-color: $primary-blue;
+      font-size: $font-size-small;
+      font-weight: 500;
+      color: $white;
+    }
+  }
+  .navbar-brand {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .hero {
+    margin-top: 120px;
+  }
+  .hero-header, .hero-action {
+    @extend .row;
+    @extend .justify-content-center;
+    @extend .text-center;
+  }
+  .hero-header {
+    h1 {
+      @extend .col-sm-12;
+      @extend .col-lg-9;
+      font-size: $font-size-large;
+      font-weight: 300;
+      line-height: 1.33;
+      color: $white;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .hero-action {
+    padding: 75px 0;
+    button {
+      width: 316px;
+      height: 72px;
+      border-radius: 36px;
+      background-color: $white;
+      font-size: $font-size-medium;
+      font-weight: 500;
+      color: $primary-blue;
+    }
+  }
+}
+
+#courses, #testimonial, #contacts {
+  @extend .text-center;
+  h2 {
+    padding-top: 150px;
+    margin-bottom: 15px;
+    color: $primary-blue;
+    font-size: $font-size-large;
+    font-weight: 500;
+    line-height: 1.33;
+    text-align: center;
+  }
+  h3 {
+    font-size: $font-size-medium + 4px;
+    font-weight: 500;
+    text-align: center;
+    color: $primary-gray;
+  }
+}
+#courses {
+  .row {
+    margin-top: 100px;
+    .col-md-4 {
+      margin: 15px 0;
+    }
+  }
+  .card {
+    border: none;
+    border-top: 3px solid transparent;
+    border-radius: 0px;
+    min-height: 500px;
+    img {
+      width: 100px;
+      margin: 50px auto;
+    }
+    &:hover {
+      border-top: 3px solid #a6bd6e;
+      box-shadow: 0 2px 25px 0 #e3dfdf;
+      .btn-action {
+        opacity: 1;
+      }
+    }
+    .card-title, .card-text {
+      margin-bottom: 16px;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: $primary-gray;
+    }
+    .card-text {
+      font-size: 16px;
+      font-weight: 300;
+      color: $primary-gray;
+    }
+    .btn-action {
+      opacity: 0;
+      transition: opacity 0.5s;
+      width: 109px;
+      height: 38px;
+      border-radius: 19px;
+      background-color: $primary-green;
+      font-size: $font-size-small;
+      font-weight: 500;
+      color: $white;
+      margin-bottom: 25px;
+    }
+  }
+  .action {
+    @extend .col-12;
+    @extend .text-center;
+    margin-top: 70px;
+    button {
+      width: 316px;
+      height: 72px;
+      border-radius: 36px;
+      background-color: #a6bd6e;
+      font-size: 20px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+  }
+}
+#testimonial {
+  .testimonial-img-slider {
+    margin-top: 100px;
+    img {
+      opacity: 0.5;
+      width: 150px;
+      border-radius: 100%;
+      margin: auto;
+    }
+    .slick-current {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+  .testimonial-text-slider {
+    h4 {
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+      color: #6e727a;
+      margin-top: 16px;
+    }
+    h5 {
+      font-size: 16px;
+      font-style: italic;
+      text-align: center;
+      color: #a3a5a9;
+      margin-bottom: 25px;
+    }
+    p {
+      width: 50%;
+      margin: auto;
+      font-size: 16px;
+      text-align: center;
+      color: #6e727a;
+      margin-bottom: 25px;
+    }
+  }
+  .btn-action {
+    background: none;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #a6bd6e;
+  }
+  .fa-angle-left, .fa-angle-right {
+    color: #254071;
+    position: absolute;
+    top: 50%;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    font-size: 40px;
+  }
+  .fa-angle-left {
+    left: -25px;
+  }
+  .fa-angle-right {
+    right: -25px;
+  }
+  padding-bottom: 72px;
+}
+#contacts {
+  background-image: linear-gradient(106deg, #000033, #30b4ff);
+  h2, h3 {
+    color: $white;
+  }
+  form {
+    input {
+      width: 607px;
+      height: 72px;
+      border-radius: 36px;
+      background-color: #ffffff;
+      font-size: 20px;
+      font-weight: 500;
+      color: #a3a5a9;
+      border: none;
+      padding: 0 24px;
+    }
+    .btn-action {
+      margin-top: -8px;
+      margin-left: -157px;
+      width: 150px;
+      height: 68px;
+      border-radius: 36px;
+      background-color: #a6bd6e;
+      font-size: 20px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+    @media screen and (max-width: 768px) {
+      input {
+        width: 100%;
+      }
+      .btn-action {
+        margin: 15px 0;
+      }
+    }
+    margin-top: 100px;
+  }
+  padding-bottom: 110px;
+}
+
+// Small border below titles
+#courses, #testimonial, #contacts {
+  h3 {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      right: 0;
+      width: 80px;
+      height: 3px;
+      background-color: #a6bd6e;
+      margin: auto;
+    }
+  }
+}
+#contacts {
+  h3 {
+    &:after {
+      background-color: #fff;
+    }
+  }
+}
+
+#footer {
+  background-color: #373737;
+  .navbar {
+    @extend .navbar-expand-sm;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    padding: 22px 10px 0;
+    .nav-link {
+      padding: 0 25px !important;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: white;
+      }
+    }
+    .nav-item a {
+      font-size: 18px;
+      font-weight: 500;
+      color: #9b9b9b;
+    }
+  }
+  .navbar-brand {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    img {
+      width: 100%;
+      opacity: 0.5;
+    }
+  }
+  .nav-social {
+    opacity: 0.3;
+    img {
+      margin: 0;
+      padding: 0 10px;
+    }
+  }
+  .container {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #979797;
+  }
+  h6 {
+    padding: 20px 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: center;
+    color: #9b9b9b;
+  }
+}
+
+// Shadowed Titles
+#courses, #testimonial, #contacts {
+  position: relative;
+  h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 105px;
+    font-size: 150px;
+    font-weight: bold;
+    line-height: 0.35;
+    text-align: center;
+    color: #f2f2f2;
+    z-index: 1;
+  }
+  h2 {
+    position: relative;
+    z-index: 2;
+  }
+}
+#contacts {
+  h1 {
+    color: rgba(37, 64, 113, 0.3);
+  }
+}
