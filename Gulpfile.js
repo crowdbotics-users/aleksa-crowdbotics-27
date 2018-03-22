@@ -5,7 +5,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 var input = './assets/scss/*.scss';
-var output = './assets/css';
+var output = './public/css';
 
 var sassOptions = {
   errLogToConsole: true,
