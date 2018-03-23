@@ -49,6 +49,15 @@ body {
           }
         }
       }
+      @media screen and (max-width: 991px) {
+        float: left;
+        .nav-item {
+          padding-left: 8px;
+        }
+        button.btn-action {
+          margin-left: 8px !important;
+        }
+      }
       .btn-action {
         @extend .ml-3;
         width: 167px;
@@ -61,6 +70,9 @@ body {
         color: #ffffff;
       }
     }
+  }
+  .navbar-toggler {
+    border-color: #33263e;
   }
 }
 #hero {
@@ -92,6 +104,16 @@ body {
     line-height: 2;
     color: #ffffff;
   }
+  @media screen and (max-width: 991px) {
+    h1 {
+      padding-top: 120px;
+      font-size: 50px;
+    }
+    h2 {
+      margin-top: 25px;
+      font-size: 20px;
+    }
+  }
   .form-wrapper {
     position: absolute;
     bottom: -80px;
@@ -100,6 +122,10 @@ body {
     padding: 50px 65px;
     background-color: #ff2c55;
     @extend .d-flex;
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      padding: 40px;
+    }
     h3 {
       margin-right: 36px;
       margin-bottom: 0;
