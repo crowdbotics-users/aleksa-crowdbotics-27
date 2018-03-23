@@ -22,12 +22,12 @@ var autoprefixerOptions = {
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./public"
         }
     });
 
     gulp.watch("assets/scss/**/*.scss", ['sass']);
-    gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch("public/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {
