@@ -33,7 +33,7 @@ body {
         line-height: 1.86;
         letter-spacing: 0.4px;
         color: #240e35;
-        padding: 10px 15px;
+        padding: 10px;
         position: relative;
         &:hover {
           color: #240e35;
@@ -217,6 +217,9 @@ body {
       letter-spacing: 0.4px;
       text-align: left;
       color: #33263e;
+      @media screen and (max-width: 769px) {
+        padding: 15px;
+      }
     }
   }
   .courses-number {
@@ -226,6 +229,9 @@ body {
     color: #33263e;
     text-align: right;
     margin-top: -150px;
+    @media screen and (max-width: 769px) {
+      font-size: 250px;
+    }
     span {
       margin-right: -40px;
     }
@@ -478,6 +484,7 @@ body {
     padding: 60px 100px;
     margin: 0 100px;
     @media screen and (max-width: 769px) {
+      padding: 20px;
       margin: 0 40px;
       .slick-left {
         left: -52px !important;
