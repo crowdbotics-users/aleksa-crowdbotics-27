@@ -1,8 +1,27 @@
 // Imports
 @import "bootstrap";
-@import "variables";
-@import "global";
 
+// Variables
+$primary-blue: #254071;
+$primary-gray: #6e727a;
+$primary-green: #a6bd6e;
+
+$white: #fff;
+
+$body-bg: #f8f8f8;
+
+$font-size-small: 16px;
+$font-size-medium: 20px;
+$font-size-large: 40px;
+
+// Global
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: $font-size-small;
+  background-color: $body-bg;
+}
+
+// Styles
 #header {
   background: url("../images/lap.png") no-repeat;
   min-height: 600px;

@@ -4,7 +4,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
-var input = './assets/scss/*.scss';
+var input = './sass/*.scss';
 var output = './public/css';
 
 var sassOptions = {
@@ -26,7 +26,7 @@ gulp.task('serve', ['sass'], function() {
         }
     });
 
-    gulp.watch("assets/scss/**/*.scss", ['sass']);
+    gulp.watch("sass/**/*.scss", ['sass']);
     gulp.watch("public/*.html").on('change', browserSync.reload);
 });
 
