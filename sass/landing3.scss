@@ -606,8 +606,8 @@ body {
   visibility: hidden;
   &.visible {
     .water-fill {
-      -webkit-animation: wave 0.8s infinite linear, fill-up 5s ease-out alternate;
-      animation: wave 0.8s infinite linear, fill-up 5s ease-out alternate;
+      -webkit-animation: wave 0.8s infinite linear, fill-up 3s ease-out alternate;
+      animation: wave 0.8s infinite linear, fill-up 3s ease-out alternate;
     }
   }
 }
