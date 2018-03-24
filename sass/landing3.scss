@@ -224,7 +224,7 @@ body {
   }
   .courses-number {
     font-size: 329px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 8px;
     color: #33263e;
     text-align: right;
@@ -232,16 +232,10 @@ body {
     @media screen and (max-width: 769px) {
       font-size: 250px;
     }
-    span {
-      margin-right: -40px;
-    }
   }
   .row.left {
     .courses-number{
       text-align: left;
-      span {
-        margin-left: -40px;
-      }
     }
     .courses-text {
       h1, h2 {
@@ -270,13 +264,6 @@ body {
     .row.right {
       .courses-text {
         order: 1;
-      }
-    }
-  }
-  @media screen and (max-width: 992px) {
-    .courses-number {
-      span {
-        margin: 0 !important;
       }
     }
   }
@@ -611,5 +598,52 @@ body {
     i {
       margin: 0 7px;
     }
+  }
+}
+
+// Animations
+.water-text {
+  visibility: hidden;
+  &.visible {
+    .water-fill {
+      -webkit-animation: wave 0.8s infinite linear, fill-up 5s ease-out alternate;
+      animation: wave 0.8s infinite linear, fill-up 5s ease-out alternate;
+    }
+  }
+}
+@-webkit-keyframes wave {
+  0% {
+    x: -400px;
+  }
+  100% {
+    x: 0;
+  }
+}
+@keyframes wave {
+  0% {
+    x: -400px;
+  }
+  100% {
+    x: 0;
+  }
+}
+@-webkit-keyframes fill-up {
+  0% {
+    height: 0;
+    y: 370px;
+  }
+  100% {
+    height: 400px;
+    y: -30px;
+  }
+}
+@keyframes fill-up {
+  0% {
+    height: 0;
+    y: 370px;
+  }
+  100% {
+    height: 400px;
+    y: -30px;
   }
 }
