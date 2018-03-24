@@ -9,8 +9,6 @@ $(function() {
   });
 
   inView('.water-text').on('enter', function(element) {
-    setTimeout(function() {
-      $(element).addClass("visible");
-    }, 200);
+    $(element).addClass("visible");
   });
 });
